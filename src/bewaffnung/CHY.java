@@ -1,24 +1,18 @@
 package bewaffnung;
 
-import bewaffnung.upgrade.*;
+import feld.*;
 import rahmen.*;
 import v.*;
-import feld.*;
 import v.gegner.*;
 import v.ver.*;
 
 public class CHY extends Waffe
 {
-	private static int tZeit = (int) U.val("Tausch"); //Level
+	private static int tZeit = 10; //Level
 	private int bereit;
 	private int tauschCld;
 	private boolean rakete;
 	private int hitze;
-
-	public static void act()
-	{
-		tZeit = (int) U.val("Tausch");
-	}
 
 	public CHY(V besitzer)
 	{
@@ -41,16 +35,16 @@ public class CHY extends Waffe
 				}
 				else
 				{
-					hitze -= lvNachladen * lvMunition * 4;
+					hitze -= lvNachladen * lvMunition * 8;
 					if(hitze < 0)
 						hitze = 0;
 				}
 			}
 			else
 			{
-				if(bereit < 20 / lvFeuerrate) //Level
+				if(bereit < 10 / lvFeuerrate) //Level
 					bereit++;
-				if(bereit >= 20 / lvFeuerrate)
+				if(bereit >= 10 / lvFeuerrate)
 				{
 					rakete = true;
 					bereit = 0;
@@ -59,7 +53,7 @@ public class CHY extends Waffe
 		}
 		else
 		{
-			hitze -= lvNachladen * lvMunition * 4;
+			hitze -= lvNachladen * lvMunition * 8;
 			if(hitze < 0)
 				hitze = 0;
 		}

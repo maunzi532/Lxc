@@ -1,6 +1,5 @@
 package bewaffnung;
 
-import bewaffnung.upgrade.*;
 import feld.*;
 import rahmen.*;
 import v.*;
@@ -10,15 +9,10 @@ public class XN extends Waffe
 {
 	private static double abw = 30;
 	private static final double maxStrom = 200;
-	private static int tZeit = (int) U.val("Tausch"); //Level
+	private static int tZeit = 10; //Level
 	private double bereit;
 	private int tauschCld;
 	private double strom;
-
-	public static void act()
-	{
-		tZeit = (int) U.val("Tausch");
-	}
 
 	public XN(V besitzer)
 	{
@@ -28,7 +22,7 @@ public class XN extends Waffe
 
 	public void tick(boolean lcl)
 	{
-		strom += lvMunition * lvNachladen * 0.3; //Level
+		strom += lvMunition * lvNachladen; //Level
 		if(strom > maxStrom * lvMunition)
 			strom = maxStrom * lvMunition;
 		if(tauschCld <= 0)
@@ -49,7 +43,7 @@ public class XN extends Waffe
 	private void feuern()
 	{
 		Listen.alle.add(new XNL(besitzer.x, besitzer.y,
-				InV.mausx, InV.mausy, lvSchaden * 5, lvSpeed * 5, abw)); //Levelx2
+				InV.mausx, InV.mausy, lvSchaden * 3, lvSpeed * 8, abw)); //Levelx2
 	}
 
 	public void nTick()

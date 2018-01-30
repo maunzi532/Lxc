@@ -1,26 +1,20 @@
 package bewaffnung;
 
-import bewaffnung.upgrade.*;
+import feld.*;
 import rahmen.*;
 import v.*;
-import feld.*;
 import v.ver.*;
 
 public class FPL extends Waffe
 {
 	private static final double abw = 40;
 	private static final double maxFuel = 600;
-	private static int tZeit = (int) U.val("Tausch"); //Level
+	private static int tZeit = 10; //Level
 	private int tauschCld;
 	private double fuel;
 	private double bereit;
 	private int fuelWCld;
 	private boolean ladetNach;
-
-	public static void act()
-	{
-		tZeit = (int) U.val("Tausch");
-	}
 
 	public FPL(V besitzer)
 	{
@@ -39,13 +33,13 @@ public class FPL extends Waffe
 		}
 		if(!ladetNach && fuel <= 0)
 		{
-			fuelWCld = (int)(100 / lvNachladen);
+			fuelWCld = (int)(50 / lvNachladen);
 			ladetNach = true;
 		}
 		if(tauschCld <= 0 && !ladetNach)
 		{
-			if(bereit <= lvFeuerrate * 3) //Level
-				bereit += lvFeuerrate * 3; //Level
+			if(bereit <= lvFeuerrate * 4) //Level
+				bereit += lvFeuerrate * 4; //Level
 			while(bereit >= 1 && fuel > 0 && lcl)
 			{
 				bereit--;
@@ -60,7 +54,7 @@ public class FPL extends Waffe
 	private void feuern()
 	{
 		Listen.alle.add(new Flamme(besitzer.x, besitzer.y,
-				InV.mausx, InV.mausy, lvSchaden * 3, lvSpeed, abw, FL.ich)); //Level
+				InV.mausx, InV.mausy, lvSchaden * 4, lvSpeed, abw, FL.ich)); //Level
 	}
 
 	public void nTick()
@@ -89,7 +83,7 @@ public class FPL extends Waffe
 	public double cldLeiste()
 	{
 		if(ladetNach)
-			return fuelWCld * lvNachladen / 100;
+			return fuelWCld * lvNachladen / 50;
 		return (double) tauschCld / tZeit;
 	}
 

@@ -58,8 +58,8 @@ public class Ich extends V
 			leben += FL.level/10000*llvt;
 		if(lw != null)
 			lw.tick(ThaCre.ta.useKeys[4]);
-		if(rw != null)
-			rw.nTick();
+		//if(rw != null)
+			//rw.nTick();
 		if(FL.mode)
 		{
 			if(ThaCre.ta.useKeys[13])
@@ -145,7 +145,7 @@ public class Ich extends V
 
 	public void tauschen()
 	{
-		if((ThaCre.ta.useKeys[9] && !tauschTaste) || lw.autoTausch() &&
+		if((ThaCre.ta.useKeys[9] && !tauschTaste)/* || lw.autoTausch()*/ &&
 				(lw == null || lw.tauschenGeht()) && (rw == null || rw.tauschenGeht()))
 		{
 			Waffe tausch = lw;
@@ -156,8 +156,8 @@ public class Ich extends V
 			norw = tn;
 			if(lw != null)
 				lw.nachTauschen();
-			if(rw != null)
-				rw.nachTauschen();
+			//if(rw != null)
+				//rw.nachTauschen();
 			tauschTaste = true;
 		}
 		if(!ThaCre.ta.useKeys[9])

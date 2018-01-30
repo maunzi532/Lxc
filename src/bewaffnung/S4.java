@@ -1,28 +1,22 @@
 package bewaffnung;
 
-import bewaffnung.upgrade.*;
+import feld.*;
 import rahmen.*;
 import v.*;
-import feld.*;
 import v.ver.*;
 
 public class S4 extends Waffe
 {
 	private static double maxSGL = 6;
-	private static int auf = 20;
-	private static int rein = 10;
-	private static int zu = 10;
-	private static int tZeit = (int) U.val("Tausch"); //Level
+	private static int auf = 10;
+	private static int rein = 5;
+	private static int zu = 5;
+	private static int tZeit = 10; //Level
 	private int tauschCld;
 	private double munition;
 	private int bereit;
 	private int zustand;
 	private int specialCld;
-
-	public static void act()
-	{
-		tZeit = (int) U.val("Tausch");
-	}
 
 	public S4(V besitzer)
 	{
@@ -51,9 +45,9 @@ public class S4 extends Waffe
 			}*/
 			if(zustand == 0)
 			{
-				if(bereit < 20 / lvFeuerrate) //Level
+				if(bereit < 12 / lvFeuerrate) //Level
 					bereit++;
-				if(bereit >= 20 / lvFeuerrate && munition > 0 && lcl)
+				if(bereit >= 12 / lvFeuerrate && munition > 0 && lcl)
 				{
 					bereit = 0;
 					munition--;
@@ -104,7 +98,7 @@ public class S4 extends Waffe
 	private void feuern()
 	{
 		Listen.alle.add(new SGL(besitzer.x, besitzer.y,
-				InV.mausx, InV.mausy, 60 * lvSchaden, 10 * lvSpeed, 0, null)); //Level
+				InV.mausx, InV.mausy, 60 * lvSchaden, 15 * lvSpeed, 0, null)); //Level
 	}
 
 	public void nTick()
