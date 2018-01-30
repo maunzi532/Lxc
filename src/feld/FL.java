@@ -66,13 +66,13 @@ public class FL
 				if(ThaCre.arg1 != null)
 				{
 					if(wNummer == 1)
-						spawn = Welle.textZuWelle(ThaCre.liesDatei(ThaCre.arg0 + File.separator +
+						spawn = Welle.textZuWelle(T.liesDatei(ThaCre.arg0 + File.separator +
 								ThaCre.arg1 + T.set("LW2")));
 					else
 						throw new Exception();
 				}
 				else
-					spawn = Welle.textZuWelle(ThaCre.liesDatei(ThaCre.arg0 + File.separator +
+					spawn = Welle.textZuWelle(T.liesDatei(ThaCre.arg0 + File.separator +
 							T.set("LW1") + wNummer + T.set("LW2")));
 			}
 			catch(Exception e)
