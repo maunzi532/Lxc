@@ -1,0 +1,73 @@
+Tom=Tom
+Lena=Lena
+Nex=Nex
+Anne=Anne
+Valerie=Valerie
+IVIL=IVIL Minenleger
+Nick=Nick
+Udo=Udo
+
+NexX=Sniper-Munition
+AR=Verfolgerakete
+IM=IVIL Mine
+LS=Schild Lena
+
+XNL=XN-417-Munition
+Flamme=Flamme
+SGL=Blitzprojektil
+Rakete=CHY-22-Rakete
+
+Ich=ICH
+Teamie=Teamie
+
+ALv=Lv
+ALe=Leben
+
+XN=XN-417
+FPL=FPL-2D2
+S4=S4-FSG
+CHY=CHY-22
+
+Ende1=Gewonnen: 
+Ende2=\ Wellen geschafft\!
+
+Hin=XXXX
+Kein=<KEIN>
+
+A1=Analyse
+A2=XN-Welle
+A3=Teamie
+A5=SGL-Schub
+
+Desc01=Leben:
+Desc02=Level:
+Desc03=X:
+Desc04=Y:
+Desc05=Beschleunigung:
+Desc06=Max. Geschwindigkeit:
+Desc07=X-Bewegung:
+Desc08=Y-Bewegung:
+Desc09=Größe:
+Desc10=Max. Leben:
+Desc11=Seite: Meine Seite
+Desc12=Seite: Feindlich
+Desc13=Farbe:
+
+U1=Wert: 
+U2=\ (+ 
+U3=)
+U4=Level: 
+U5=\ (+1)
+U6=Upgrade kostet 
+U7=\ Punkte
+
+A1=Y drücken zum Waffe links ändern
+A2=X drücken zum Waffe rechts ändern
+A3=P drücken zum starten
+
+B_XN=Hohe Feuerrate, mittelschnelle Projektile
+B_FPL=Sehr hohe Feuerrate, langsame Projektile
+B_S4=Niedrige Feuerrate, starke, schnelle Projektile, suchend bei hoher Distanz
+B_CHY=Niedrige Feuerrate, langsame, explosive Projektile, Flächenschaden, suchend
+A4=<- 
+A5=\ ->

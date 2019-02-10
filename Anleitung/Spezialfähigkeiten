@@ -1,0 +1,16 @@
+XN-Welle
+	Taste: 1
+	Cooldown: 1000 Ticks
+	Schießt XN-417-Munition in alle Richtungen
+
+Teamie platzieren
+	Taste: 2
+	Cooldown: 500 Ticks
+	Platziert einen Teamie, der in zufällige
+	Richtungen CHY-22-Raketen schießt
+
+Warp
+	Taste: 3
+	Cooldown: 50 Ticks
+	Teleportiert dich an die Mausposition, aber
+	danach kannst du 50 Ticks lang nichts machen

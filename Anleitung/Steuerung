@@ -1,0 +1,18 @@
+Immer
+	Löschtaste = Beenden
+	Scrollen = Bildgröße ändern
+Startmenü
+	Y, . = Links wechseln
+	X, - = Rechts wechseln
+	P, Esc = Starten
+Im Spiel
+	WASD, IJKL, ↑←↓→ = Bewegen
+	Linksklick = Schießen
+	Rechtsklick = Tauschen
+	P, Esc = Pause
+	1 = XN-Welle
+	2 = Platziere Teamie
+	3 = Warp
+	E = Analyse
+Im Pausemenü
+	P, Esc = Weiter
